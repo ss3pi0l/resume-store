@@ -1,0 +1,96 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+
+\let\endtitlepage\relax
+
+% for Times New Roman
+\usepackage[T1]{fontenc}
+\usepackage{times}
+
+% paper geometry
+\usepackage[a4paper,
+            top=1in,
+            left=1.5in,
+            bottom=1.25in,
+            right=1in]{geometry}
+
+% for 1.5 line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% for double spacing between paragraphs
+\setlength{\parskip}{\baselineskip}
+
+\usepackage{indentfirst}
+% for stopping hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% for images
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+% for header footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead{}
+\fancyfoot[C]{AISSMS COE, Department of Computer Engineering 2022-23 \\ \vspace{1em} \thepage}
+\fancypagestyle{empty}{%
+    \fancyhf{}
+    \fancyhead{}
+    \fancyfoot[C]{AISSMS COE, Department of Computer Engineering 2022-23 \\ \vspace{1em} \thepage}
+}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+
+\usepackage{titlesec}
+\assignpagestyle{\chapter}{fancy}
+\titleformat{\chapter}[display]
+{\centering \normalsize \huge \bfseries \vspace*{-3em}}{\thechapter}{10pt}{}
+
+\renewcommand{\contentsname}{\textbf{TABLE OF CONTENTS}}
+\renewcommand{\listfigurename}{\textbf{LIST OF FIGURES}}
+\renewcommand{\listtablename}{\textbf{LIST OF TABLES}}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+
+\usepackage{booktabs, tabularx}
+\usepackage{caption}
+
+\usepackage{enumitem}
+\setlist{nosep}
+
+\usepackage{lipsum}
+
+\title{
+    \setstretch{1.0}
+    \textbf{\normalsize A PRELIMINARY REPORT ON} \\
+    \vspace*{0.5em}
+    \textbf{\huge RESUME EVALUATION USING MACHINE LEARNING} \\
+    \vspace*{0.5em}
+    {\normalsize SUBMITTED TO THE SAVITRIBAI PHULE PUNE UNIVERSITY, PUNE IN THE PARTIAL FULFILLMENT OF THE REQUIREMENTS FOR THE AWARD OF THE DEGREE} \\
+    {\normalsize OF} \\ 
+    \vspace*{0.5em}
+    \textbf{\huge BACHELOR OF ENGINEERING (COMPUTER ENGINEERING)} \\
+    \vspace*{0.5em}
+    {\normalsize SUBMITTED BY} \\
+    \vspace*{0.5em}
+    \textbf{\normalsize SWANAND PANKAJ MODAK (20CO073)} \\
+    \vspace*{-0.5em}
+    \textbf{\normalsize PRASANNA DATTATRAY SHINDE (20CO124)} \\
+    \vspace*{-0.5em}
+    \textbf{\normalsize ANIKET SANTOSH TIWARI (20CO135)} \\
+    \vspace*{0.5em}
+    \textbf{\huge DEPARTMENT OF COMPUTER ENGINEERING} \\
+    \vspace*{0.5em}
+    \textbf{\normalsize AISSMS COLLEGE OF ENGINEERING} \\
+    \textbf{\normalsize PUNE 411041} \\
+    \textbf{\normalsize SAVITRIBAI PHULE PUNE UNIVERSITY} \\
+    \vspace*{-0.5em}
+    \textbf{\normalsize 2022-23} \\
+    \vspace*{-16cm}
+}
+\date{}

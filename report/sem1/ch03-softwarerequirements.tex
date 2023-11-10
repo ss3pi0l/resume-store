@@ -1,0 +1,441 @@
+\chapter{Software Requirement Specification}
+
+\section{Introduction}
+In today's fast-paced and competitive job market, organizations are inundated with a massive influx of resumes from job seekers. Managing this deluge of applications efficiently, while ensuring that the right candidates are identified, is a formidable challenge. The ”Resume Classification and Candidate Application Tracking System” project addresses this critical need by offering a powerful and automated solution that streamlines the recruitment process. This project aims to revolutionize the way organizations handle candidate applications and resumes. By integrating cutting-edge technologies from natural language processing (NLP) and machine learning, it provides an intelligent system for classifying, organizing, and tracking job applicants Whether you are a small business looking to expand your fleet or a large enterprise processing hundreds of applications daily, this system provides a  scalable and customizable solution.
+
+\subsection{Project Scope}
+The purpose of this project is to develop and implement a comprehensive system that automates theclassification and tracking of job applicants and their resumes. The system is designed to streamline the recruitment process, improve the efficiency of the HR department, and enhance candidate selection. 
+
+The scope of this project encompasses the following key components:
+\begin{description}
+    \item [1. Resume Classification:] To develop and automated system that classifies the resumes into predefined roles or jobs using Natural Language Processing (NLP) and Machine Learning techniques. 
+    \item [2. Candidate Tracking:] To implement a candidate tracking system that enables end-to-end monitoring of candidates progress and also design a user-friendly interface for HR professionals and hiring managers to update candidate statuses
+    \item [3. Customization and Configuration:] To provide flexibility for organizations to classify job roles and work flow and also ensures that system can adapt varying requirement processes.
+    \item [4. Automation:] To automate resume screening and classification process which reduces manual efforts and speeds up the process for candidate selection for a job role.
+\end{description}
+
+
+\subsection{User Classes and Charecteristics}
+User classes help us identify different groups of individuals who will interact with the system. Understanding these classes helps us tailor our system to meet their specific needs.
+
+Classes and charecteristics of our project are:
+\begin{enumerate}
+    \item \textbf{HR Professionals:}
+		\begin{itemize}
+			\item Lead users which are responsible for managing the hiring process.
+			\item Creating and customizing job roles and classification criteria.
+			\item TRacking and updating candidates application progress.
+			\item Requires a user-friendly interface for efficient workflow management.
+		\end{itemize}
+    \item \textbf{Hiring Manager:}
+		\begin{itemize}
+			\item Collaboration with HR professionals in evaluating candidates. Has access to candidates profile and CV.
+			\item Provides opinion and inputs to decisions.
+			\item	They need and easy user-interface to rate and comment on candidate.
+		\end{itemize}
+    \item \textbf{Job Applicants:}
+		\begin{itemize}
+			\item Followed by HR profesionals and Hiring managers, Candidates is an essential class for our project
+			\item Candidates apply for positions externally or within the organization.
+			\item They can submit their resume, recieve automatic status updates and track their applications.
+		\end{itemize}
+    \item \textbf{System Administrator:}
+		\begin{itemize}
+			\item System administrators manage system configuration and customization. They also ensure system security and user access control.
+			\item They handle software updates and provide technical support for the system users.
+		\end{itemize}
+\end{enumerate}
+
+\subsection{Assumptions and Dependencies}
+Identfying assumptions and dependencies are essential so that we can ensure that essential conditions are met for successful execution of our project.
+
+\textbf{Assumptions:}
+\begin{description}
+    \item [1. Data Availability:] It is assumed that the project will have access to a sufficient volume of historical resumes and application data for training and testing the classification and tracking system.
+    \item [2. Resource Availability:] Availability of the required resources, including personnel, hardware, software, and data storage, to implement and operate the system.
+    \item [3. Active Participation and User Cooperation:] The successful implementation of the system assumes the cooperation and active participation of HR professionals, hiring managers, and other users in defining classification criteria and workflows. 
+    \item [4. Team Availability:] THe project team members are assumed to be available as per project schedule for completing the deadlines and delivering the project on time.
+\end{description}
+
+\textbf{Dependencies:}
+\begin{description}
+    \item [1. Data Acquisition:] This project is dependent on acquiring historical resume and application data, which is crucial for training the machine learning models and testing the system.
+    \item [2. NLP and Machine Learning Models:] The project depends on the development and fine-tuning of NLP and machine learning models for resume classification, which may require iterative testing and refinement.
+    \item [3. User Training:] After successful user adoption is dependent on the development of user training materials and conducting training sessions for HR professionals, hiring managers, and other system users.
+    \item [4. Testing and Quality Assurance:] The project depends on thorough testing and quality assurance processes to ensure the system's accuracy, security, and usability.
+    \item [5. External Services:] Any external services, such as email notifications or mobile notifications may be dependent on third-party providers' availability and reliable functioning.
+\end{description}
+
+
+\section{Functional Requirements}
+
+\subsection{Resume Classification:} 
+\begin{itemize}
+	\item The system automatically classifies the resumes into predefined job roles based on content analysis using NLP and machine learning models.
+	\item HR professionals can define and customize criteria used for classification to align with specific job description.
+\end{itemize}
+
+\subsection{Candidate Tracking:}
+\begin{itemize}
+	\item  HR professionals can track candidates' progress from initial application through interview stages to onboarding.
+	\item The system sends automated status updates to candidates, keeping them informed about the progress of their applications.
+\end{itemize}
+
+\subsection{Customization and Configuration:}
+\begin{itemize}
+	\item Organizations can configure and customize their recruitment workflows, including job role-specific workflows.
+	\item Access control is defined so that unauthorized user will not have the permission to access sensitive data and features.
+\end{itemize}
+
+\subsection{Automation:}
+\begin{itemize}
+	\item Automating the initial screening and shortlisting of candidates based on predefined criteria.
+	\item Streamline the interview scheduling process by integrating with calendars and sending notifications to candidates and interviewers.
+\end{itemize}
+
+\subsection{Security and Compliance:}
+\begin{itemize}
+	\item Implementing role-based access control to ensure data security and compliance with privacy regulations.
+	\item  Enabling compliance officers to review and enforce legal and ethical standards in the recruitment process.
+\end{itemize}
+
+\subsection{Scalability:}
+\begin{itemize}
+	\item Designing the system with scalability in mind to accommodate growing application volumes and organizational needs.
+\end{itemize}
+
+These system features aim to streamline the recruitment process, enhance efficiency, and provide valuable insights into candidate selection. Customization and a user-friendly interface ensurethat the system meets the specific requirements of organizations while maintaining data security and compliance with industry regulations.
+
+
+\section{External Interface Requirements}
+\subsection{User Interface}
+A web based user-interface which is accessible to HR professionals and hiring managers must be created. The user-interface must be responsive and should support multiple devices so that users can access it anywhere and on any device.
+
+\subsection{Software Interface}
+\begin{enumerate}
+    \item \textbf{Integration with HR systems}
+    \begin{itemize}
+	    \item Data import and export capabilities should be implemented for exchange of information with existing HR system or applicant tracking syste.
+	    \item API for integration with third-party tools and services must also be offered, including email applications, for communication and scheduling
+    \end{itemize}
+    \item \textbf{Calender and Scheduling}
+		\begin{itemize}
+			\item We can integrate with popular calender applications eg. Google calender or Outlook so that we can facilitate interview scheduling and calender availability checks.
+			\item Also to ensure hat interview schedules and updates are synchronized with external calendar systems.
+		\end{itemize}
+    \item \textbf{External Services}
+		\begin{itemize}
+			\item Connecting the user system to xternal services, such as background checks or reference verification services, via APIs for additional candidate screening.
+			\item The system is designed to to work with external services which have periodic downtimes or maintenance windows.
+		\end{itemize}
+    \item \textbf{Browser Compatibility}
+		\begin{itemize}
+			\item The browser and version must be specified so that the system will be compatible to ensure a consistent and uninterrupted user experience.
+		\end{itemize}
+\end{enumerate}
+
+\subsection{Communication Interface}
+The system must be configured so that notifications are sent to applicant, HR and the hiring manager regrading the application statuses, interview invitation and other relevant updates. We can use the Simple Mail Transfer Protocol (SMTP) server configuration for email delivery.
+
+
+\section{Non-functional Requirements}
+\subsection{Performance Requirement}
+To guarantee that the system functions are effectively and efficiently in real-world scenarios, performance requirements for machine learning based resume classification and candidate application tracking system are crutial. The system's capabilities and performace standards are outlined in these requirements.
+
+Performance requirements are as follows:
+
+\begin{enumerate}
+    \item \textbf{Response time:}
+		\begin{itemize}
+			\item The system should provide a responsive user interface with a maximum response time of 2 seconds for typical user interactions, such as resume classification, candidate status updates, and report generation.
+			\item Resume classification should not take more than 5 seconds for each resume submitted.
+		\end{itemize}
+    \item \textbf{Scalability:}
+		\begin{itemize}
+			\item The system should be scalable enough to handel 10,000 applications per month without degradation in performance.
+			\item The system must also support horizontal scaling to accommodate increased 	application volumes.
+		\end{itemize}
+    \item \textbf{Throughput:}
+		\begin{itemize}
+			\item The system must have the capability of processing atleast 50 resumes per hour for automated screening and classification.
+			\item	The system must support 20 candidates per minute for interview scheduling and candidate tracking system.
+		\end{itemize}
+    \item \textbf{Data Storage and Retrieval:}
+		\begin{itemize}
+			\item The retrieval time for resume retrieval and document storage must be less than 3 seconds for individual resumes.
+			\item The system should maintain a record of at least 5 years' worth of application and candidate data.
+		\end{itemize}
+    \item \textbf{Availability and Uptime:}
+		\begin{itemize}
+			\item The system should have a minimum uptime of 99.9\% to ensure accessibility during business hours.
+			\item The scheduled maintenance and updates should be communicated to users in advance, and these activities should take place during non-peak hours.
+		\end{itemize}
+    \item \textbf{Data Reporting:}
+		\begin{itemize}
+			\item The system generated report must be completed within 5 minutes for standard reports and 15 minutes for complex or custom reports.
+			\item The data analytics queries must be executed within 10 seconds for standard query and 30 seconds for complex queries.
+		\end{itemize}
+    \item \textbf{Miscellaneous requirements:}
+		\begin{itemize}
+			\item External service calls and integrations, such as email notifications and calendar updates, should have response times of less than 5 seconds.
+			\item Mobile applications or mobile web interfaces should provide a responsive experience with a maximum response time of 3 seconds for common user interactions.
+		\end{itemize}
+\end{enumerate}
+
+
+\subsection{Safety Requirements}
+
+Establishing safety requirements is essential when using Machine Learning for resume classification to gurantee the system's dependability and efficiency. 
+
+Here are some safety requirements for our project: 
+
+\begin{enumerate}
+    \item \textbf{Data Security}
+		\begin{itemize}
+			\item The applicants data must be stored securely and in encrypted format to avoid unauthorized access and data breaching.
+			\item Role based access control must be implemented to ensure that only authorized user can view and modify sensitive information.
+		\end{itemize}
+    \item \textbf{Data Privacy}
+		\begin{itemize}
+			\item The system must ensure that it compiles with data protection laws and regulations, such as HIPAA, depending on the region and type of data being processed.
+			\item User consent should be obtained and documented for data processing, and data retention policies must be adhered to.
+		\end{itemize}
+    \item \textbf{User Authentication:}
+		\begin{itemize}
+			\item Implementing strong user authentication mechanisms, such as two-factor authentication (2FA) or single sign-on (SSO), to prevent unauthorized access.
+			\item Ensuring that any external services and third-party integrations used for email, calendar, or data exchange are secure and adhere to security best practices.
+		\end{itemize}
+    \item \textbf{Secure Communication:}
+		\begin{itemize}
+			\item All data transmitted between the system and users should be encrypted using secure communication protocols (e.g., HTTPS) to prevent eavesdropping.
+		\end{itemize}
+    \item \textbf{Disaster Recovery:}
+		\begin{itemize}
+			\item Disaster recovery plan must be developed and tested to ensure data and system recovery in case of system failure, data loss or security breaches.
+			\item An incident response time must also be developed to address and mitigate security breaches, including data breaches and unauthorized access with clear procedures and notifications.
+		\end{itemize}
+    \item \textbf{Consent Tracking and Regular Security Audits:}
+		\begin{itemize}
+			\item A consent tracking mechanism must be implemented to record and manage candidate consent for data processing, including data storage and communication.
+			\item Conduct regular security audits, vulnerability assessments, and penetration testing to identify and address potential security weaknesses.
+		\end{itemize}
+    \item \textbf{Audit Trials:}
+		\begin{itemize}
+			\item A comprehensive audit logs must be maintained that record all user actions, system events, and data modifications. These logs should be protected from tampering.
+		\end{itemize}
+\end{enumerate}
+
+
+\subsection{Security Requirement}
+
+A security requirement is a goal set out for an application at its inception. Every application fits a need or a requirement. It is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. A software security requirement should be much like a functionality requirement; it shouldn’t be vague or unattainable.
+
+Here are some Security Requirements:
+
+\begin{enumerate}
+    \item \textbf{Model Security:}
+		\begin{itemize}
+			\item Prevent unwanted access and manipulation with the ML models. Make use of version control and secure containers. 
+			\item To avoid malicious model injections, implement secure methods for version control and model updates.
+		\end{itemize}
+    \item \textbf{System Security:}
+		\begin{itemize}
+			\item To manage who has access to and can alter the ML system, put robust authorization and authentication procedures in place.
+			\item To ensure that no unauthorized users gain access to the system, use intrusion detection systems, firewalls, and secure communication protocols.
+			\item To identify and address security problems, like intrusion attempts, implement thorough monitoring and logging.
+			\item Make that the system has fail-safes in place so that, in the case of a system malfunction or security compromise, it will revert to a safe state.
+		\end{itemize}
+    \item \textbf{Adversarial Robustness:}
+		\begin{itemize}
+			\item Apply strategies to protect machine learning models from adversarial attacks and make sure they continue to function even when intentional alterations are made.
+			\item Conduct regular system vulnerability and adversarial attack tests.
+		\end{itemize}
+\end{enumerate}
+
+
+\subsection{Software Quality Attributes}
+Software Quality Attributes are features that facilitate the measurement of performance of a software product by Software Testing professionals.
+
+It includes the following:
+\begin{itemize}
+	\item \textbf{Usability:}  The system should be user-friendly and self-explanatory. Proposed system is flexible, robust, and easily testable.
+	\item \textbf{Reliability:}  Software system reliability is an important attribute of software quality. System Reliability is hard to achieve because the complexity of the system tends to be high. It is the measure of how long a system/machine performs its intended function.
+	\item \textbf{Robustness:}  The program must be able to function well in a range of environmental factors.
+	\item \textbf{Accuracy:} Ensure that the system accurately classifies resumes into predefined job roles and tracks candidate progress without errors.
+	\item \textbf{Performance Efficiency:} Optimize system performance to handle high application volumes, ensuring that response times meet user expectations.
+	\item \textbf{Scalability:} Design the system to be scalable, capable of handling growing numbers of resumes and users without significant degradation in performance.
+	\item \textbf{Security:} Implement robust security measures to protect candidate data, prevent unauthorized access, and ensure compliance with data protection regulations.
+	\item \textbf{Testing and Quality Assurance:} Conduct thorough testing, including unit testing, integration testing, and user acceptance testing, to identify and address issues before deployment.
+	\item \textbf{External Integration:} Verify the compatibility and reliability of external integrations with third-party services and tools.
+	\item \textbf{Scalability Testing:} Perform load testing to validate the system's scalability, ensuring it can handle peak usage without performance degradation.
+	\item \textbf{Data Reporting and Analytics:} Enable users to generate custom reports and analyze recruitment data effectively, providing valuable insights for decision-making.
+\end{itemize}
+
+
+\section{System Requirements}
+
+\subsection{Database Requirement}
+Database requirements are crutial as they dictate how data is stored, managed and accessed. 
+
+Some key database requirements are:
+\begin{enumerate}
+    \item \textbf{User Information:}
+		\begin{itemize}
+			\item This includes information such nas name, address, phone number, email ID, academic details, previous experience and all other information which can be extracted from the resume using a resume parser.
+		\end{itemize}
+    \item \textbf{Data Schema Design:}
+		\begin{itemize}
+			\item A well-structured and normalized data schema that accurately represents applicant and resume information. Include fields for personal details, job history, education, skills, and application status.
+		\end{itemize}
+    \item \textbf{Relational Database Management System (RDBMS):}
+		\begin{itemize}
+			\item As our project involves semi-structured data such as text based resumes, it needs to be stored and queried using a NoSQL database like MongoDB which is flexible for storage and integrates with chosen technology stack.
+		\end{itemize}
+    \item \textbf{Scalability and Partitioning:}
+		\begin{itemize}
+			\item Design the database for scalability, allowing it to handle an increasing number of resumes and applicant records. Consider horizontal partitioning (sharding) if needed.
+		\end{itemize}
+    \item \textbf{Backup and Recovery Strategy:}
+		\begin{itemize}
+			\item The implemented database is backed up at regular basis to protect against data loss.. Test the restore process to ensure data recovery capabilities.
+		\end{itemize}
+    \item \textbf{Backup Encryption:}
+		\begin{itemize}
+			\item Encrypt database backups to ensure the security of data during backup and restore operations, preventing unauthorized access to sensitive information.
+		\end{itemize}
+    \item \textbf{Database Monitoring:}
+		\begin{itemize}
+			\item mplement continuous database monitoring to detect and respond to performance bottlenecks, anomalies, and potential issues in real-time. Monitoring should include resource usage, query performance, and security alerts.
+		\end{itemize}
+\end{enumerate}
+
+
+\subsection{Software Requirement}
+These requirements specify software components and technologies necessary for the project's successful development and operation
+
+They are as follows:
+
+\begin{enumerate}
+    \item \textbf{Operating System (OS):}
+		\begin{itemize}
+			\item The server hosting the system should run a supported and secure operating system, such as Linux (e.g., Ubuntu, CentOS) or Windows Server.
+			\item The user interface should be accessible on various client platforms, including Windows, macOS, and mobile operating systems (iOS, Android).
+		\end{itemize}
+    \item \textbf{Web Server:}
+		\begin{itemize}
+			\item A web server software is required for serving web based user interfaces and handling HTTP requests.
+		\end{itemize}
+    \item \textbf{Database Management System:}
+		\begin{itemize}
+			\item A NoSQL database to store all the information about the candidate. It also aligns with the project's requirement
+		\end{itemize}
+    \item \textbf{Programming Languages:}
+		\begin{itemize}
+			\item Python is used for building the machine learning model and applying NLP techniques required for the project along with Streamlit, which is a web framework used to create an user interface.
+		\end{itemize}
+\end{enumerate}
+
+
+\subsection{Hardware Requirement}
+Hardware requirements will depend on various factors, including the expected system load, scalability needs, and performance goals. 
+
+Here are the hardware requirements:
+
+\begin{enumerate}
+    \item \textbf{Server Hardware:}
+		\begin{itemize}
+			\item CPU: Multi-core processors to handle the computational load efficiently. The number of cores depends on expected user load and data processing requirements.
+			\item RAM: Sufficient RAM to support concurrent users, database operations, and data processing tasks.
+			\item Storage: Fast and reliable storage solutions, such as Solid-State Drives (SSDs) for low latency data retrieval and database performance.
+			\item Network Interface: Gigabit Ethernet or higher to ensure fast data transfer and network responsiveness.
+		\end{itemize}
+    \item \textbf{Load Balancer:}
+		\begin{itemize}
+			\item If the application experiences high traffic, consider a load balancer to distribute requests across multiple application servers for load balancing and redundancy.
+		\end{itemize}
+    \item \textbf{Database Server:}
+		\begin{itemize}
+			\item The database server should meet the same CPU, RAM, and storage requirements as the application server.
+		\end{itemize}
+    \item \textbf{Backup and Storage Devices:}
+		\begin{itemize}
+			\item Deploy backup and storage devices for automated data backups, ensuring data safety and disaster recovery capabilities.
+		\end{itemize}
+    \item \textbf{Internet Connection:}
+		\begin{itemize}
+			\item Updates to software libraries necessitate internet connection. This flexibility enables adaptability to changing requirements in jon application and tracking system.
+		\end{itemize}
+\end{enumerate}
+
+
+\section{Analysis Model: SDLC Model to be applied}
+The Agile Methodology is well suited for this project as it emphasizes on flexibility, collaboration and iterative development. Stages of development are as follows:
+\begin{enumerate}
+	\item \textbf{Requirement Gathering:} The team collaborates with stakeholders to gather and document the system's functional and non-functional requirements. Key activities included in this phase are as follows:
+		\begin{itemize}
+			\item Conducting interviews with HR professionals, hiring managers, and system users to understand their needs.
+			\item Reviewing industry best practices and compliance requirements, such as data privacy regulations.
+			\item Defining the system's features, user stories, and use cases in the product backlog and prioritizing requirements based on their impact on the project.
+		\end{itemize}
+	\item \textbf{Design the Requirements:} Once the  requirements are gathered for this project, the design phase focuses on creating a detailed plan for the system's architecture, user interfaces, and data models. Activities included in this phase are as follows:
+		\begin{itemize}
+			\item Designing the database schema to support data storage and retrieval efficiently.
+			\item Architecting the system with scalability, security, and maintainability in mind.
+			\item Developing a technical design document that outlines how the system will be built.
+			\item Creating wireframes to visualize the user interface and gather feedback from the user.
+		\end{itemize}
+	\item \textbf{Construction / Iteration:} During the construction or iteration phase, the actual development of the system takes place. The key points included in this phase are as follows:
+		\begin{itemize}
+			\item The development is organized in sprints or iterations using agile methodology.
+			\item We begin by developoing a resume parsing algorithm which will parse the resume (supported formats are .pdf and .docx) and extract the candidates information such as name, education, qualification and past experiences(if any).
+			\item After extracting the information, stop-words will be removed and the keywords will be stored in our NoSQL database. 
+			\item We will develop a machine learning model using NLP techniques and train this model on the keywords which are stored in our database.
+			\item Performance of the model will be eveluated using the F1 Score.
+			\item After each iteration of training the model, we will tune the hyperparameters for increasing the accuracy of our model untill it reaches a saturation point.
+		\end{itemize}
+	\item \textbf{Tesing/Quality Assurance:} This phase is essential to verify that the system meets the specified requirements and is free of defects. Following activities are included in this phase:
+		\begin{itemize}
+			\item Continuous testing of AI models, databases, and system components should be done concurrently with development
+			\item We make sure that resume parsing is done without any error and model is trained after removing all stop-words.
+			\item Conducting unit testing to test individual components and functions.
+			\item Carrying out user acceptance testing (UAT) to involve stakeholders in testing and validation.
+			\item Performing integration testing to ensure that different system modules work together seamlessly.
+		\end{itemize}
+	\item \textbf{Deployment:} This phase makes the system available for users. Key aspects of this phase includes:
+		\begin{itemize}
+			\item Initially we prepare the production environment,which includes servers, databases, and networking components.
+			\item Followed by deploying the system to the production environment while ensuring minimal disruption to operations.
+			\item Monitoring the deployment process for errors, and having rollback plans in case of issues.
+			\item After deploying the production enviornment we communicate the release to stakeholders and provide the documentation as needed.
+			\item And finally setting up ongoing maintenence procedures to address issues and updates on post-deployment in essential.
+		\end{itemize}
+    \item \textbf{Feedback:} Feedback is a continuous process that takes place throughout the project's lifecycle, but it's especially important after deployment. The activites invloved in this phase are as folloes:
+		\begin{itemize}
+			\item Collecting feedback from system users, HR professionals, and hiring managers to identify issues, improvements, and new requirements.
+			\item Conducting regular retrospectives and post-implementation reviews to assess what went well and what could be enhanced in the development and deployment processes.
+			\item Using feedback to inform future iterations and updates to the system.
+		\end{itemize}
+\end{enumerate}
+
+
+\section{System Implementation Plan}
+Planning is the first step involved in system implementation. It is a very basic function which describes effectively the very basic questions of how, where and when the objectives can be realized, or it serves as a guiding framework.
+
+The System Implementation Plan table shows the overall schedule of tasks compilation and time duration required for each task.
+
+\begin{center}
+    \begin{tabularx}{0.8\textwidth}{ >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X  }
+        \toprule
+        \textbf{Month} & \textbf{Task} & \textbf{Date of Execution} \\ 
+        \midrule[1pt]
+        August & Problem statement, objectives, motivation finalisation & 14/08/2023 \\
+        \midrule
+        September & Understanding project requirements, scope, feasibility & 16/09/2023 \\
+        \midrule
+        October & Literature review, base paper finalisation and algorithm analysis & 20/10/2023 \\
+        \midrule
+        November & Review paper draft and publication & 15/11/2023 \\
+        \bottomrule
+    \end{tabularx}
+    \captionof{table}{System Implementation Plan}
+\end{center}
