@@ -1,2 +1,10 @@
 # ignoring the virtual environment
 resume_store_venv/
+
+# ignore the latex auxilliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.synctex.gz
+*.toc
