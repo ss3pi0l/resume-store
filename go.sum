@@ -1,0 +1,6 @@
+github.com/mattn/go-sqlite3 v1.14.22 h1:2gZY6PC6kBnID23Tichd1K+Z0oS6nE/XwU+Vz/5o4kU=
+github.com/mattn/go-sqlite3 v1.14.22/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
+github.com/primalmotion/simplai v0.0.0-20231106065448-131b1cdda98f h1:YF/XY48cIUve1oCr5W5VeZBj04uSAE97rpvrFwHaMkM=
+github.com/primalmotion/simplai v0.0.0-20231106065448-131b1cdda98f/go.mod h1:k7v87afCIRlZ49pMaPbi1pUZ4SNHZfAzgDecVseq4Ik=
+golang.org/x/crypto v0.23.0 h1:dIJU/v2J8Mdglj/8rJ6UUOM3Zc9zLZxVZwwxMooUSAI=
+golang.org/x/crypto v0.23.0/go.mod h1:CKFgDieR+mRhux2Lsu27y0fO304Db0wZe70UKqHu0v8=

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-300">
+    <header class="bg-gray-800 text-white px-4 py-4 flex justify-between">
+        <h1 class="text-5xl font-bold">Samarpak Management Solution</h1>
+        <nav class="flex space-x-4">
+          <a href="signup.html" class="hover:text-gray-400">SignUn</a>
+          <a href="login.html" class="hover:text-gray-400">Login</a>
+        </nav>
+    </header>
+    <section>
+      <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col items-right">
+          <ul class="flex mb-4 bg-gray-700 rounded-full">
+            <li class="mr-2">
+              <a href="index.html">
+                <button type="button" id="homebtn" class="px-4 py-2 text-base leading-6 font-medium text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                  Home
+                </button>
+              </a>
+            </li>
+            <li class="mr-2">
+              <a href="about_us.html">
+                <button type="button" id="aboutusbtn" class="px-4 py-2 text-base leading-6 font-medium text-white active bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                  About Us
+                </button>
+              </a>
+            </li>
+            <li class="mr-2">
+              <a href="testimonial.html">
+                <button type="button" id="testbtn" class="px-4 py-2 text-base leading-6 font-medium text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                  Testimonials
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="contact_us.html">
+                <button type="button" id="cntbtn" class="px-4 py-2 text-base leading-6 font-medium text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                  Contact Us
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </section>
+    
+    <section>
+      <div class="container mx-auto px-4 py-8">
+        <header class="flex justify-between items-center mb-8">
+          <h1 class="text-3xl font-bold text-gray-300">About Us</h1>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex flex-col space-y-4">
+            <h2 class="text-xl font-bold text-gray-300">Who We Are</h2>
+            <p class="text-gray-400">
+              Samarpak Management Solutions We work as partners with our clients to expand their business potential by providing tailored and pragmatic management solutions. We are a group of professionals, dedicatedly working to bring Strategic Performance Improvement in organizations consistently and efficiently! We are a creative management consulting firm offering value-adding partnerships to organizations, providing Human resource planning, Recruitment, Selecting, Hiring, Training, Induction, Orientation, Evaluation, Promotion, Employee remuneration and Benefits Administration, Performance Management, Employee Relations, Training, Leadership & Team Development services resulting in superior business outcomes.
+            </p>
+          </div>
+          <img class="rounded-lg shadow-md object-cover object-center h-64" src="assets/building/vertical-shot-white-building-clear-sky.jpg" alt="Company Photo">
+        </section>
+
+        <section class="mt-8">
+          <h2 class="text-xl font-bold text-gray-300 mb-4">Our Team</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="flex flex-col bg-gray-800 shadow-md rounded-lg p-4">
+              <img class="w-24 h-24 mx-auto rounded-full mb-2" src="assets/aboutus/beard_3006884.png" alt="Team Member 1">
+              <h3 class="text-center text-lg font-medium text-gray-300">John Doe</h3>
+              <p class="text-center text-gray-400">Co-founder & CEO</p>
+            </div>
+            <div class="flex flex-col bg-gray-800 shadow-md rounded-lg p-4">
+              <img class="w-24 h-24 mx-auto rounded-full mb-2" src="assets/aboutus/man-suit-tie_3729.png" alt="Team Member 2">
+              <h3 class="text-center text-lg font-medium text-gray-300">Jane Smith</h3>
+              <p class="text-center text-gray-400">Head of Development</p>
+            </div>
+            <div class="flex flex-col bg-gray-800 shadow-md rounded-lg p-4">
+              <img class="w-24 h-24 mx-auto rounded-full mb-2" src="assets/aboutus/young-man_4440953.png" alt="Team Member 3">
+              <h3 class="text-center text-lg font-medium text-gray-300">Michael Lee</h3>
+              <p class="text-center text-gray-400">Marketing Manager</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    
+    <footer class="bg-gray-800 text-white flex justify-left py-4">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                    <h3 class="text-lg font-semibold text-gray-300 mb-4">Contact Us</h3>
+                    <ul class="list-disc space-y-2 text-gray-400">
+                        <li>Email: <a href="mailto:youremail@yourcompany.com" class="text-blue-500 hover:underline">youremail@yourcompany.com</a></li>
+                        <li>Phone: (555) 555-5555</li>
+                        <li>Address: 123 Main Street, Anytown, CA 12345</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                    <h3 class="text-lg font-semibold text-gray-300 mb-4">Why we started?</h3>
+                    <p class="text-gray-400">We started Samarpak Management Solutions because we identified that small and medium business owners weren’t receiving that “Next Level” Strategic, Operational, Financial and Management advice that were given to larger corporations an edge.</p>
+                </div>
+                <div>
+                    <a href="#" class="text-xl hover:text-gray-400 mr-4">
+                        <i class="fab fa-instagram">Instagram</i>
+                    </a>
+                    <a href="#" class="text-xl hover:text-gray-400 mr-4">
+                        <i class="fab fa-facebook-f">Facebook</i>
+                    </a>
+                    <a href="#" class="text-xl hover:text-gray-400">
+                        <i class="fas fa-envelope">Mail</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

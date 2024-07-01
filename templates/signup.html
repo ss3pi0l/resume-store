@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Signup</title>
+  </head>
+
+  <body class="bg-gray-900 text-gray-300">
+    <header class="bg-gray-800 text-white px-4 py-4 flex justify-between">
+      <h1 class="text-xl font-bold">Samarpak Management Solution</h1>
+      <nav class="flex space-x-4">
+        <a href="index.html" class="hover:text-gray-400">Back to Home</a>
+      </nav>
+    </header>
+
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex justify-center">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+          <h1 class="text-5xl font-bold mb-4 text-center">Signup</h1>
+          <p class="mb-6 text-center">
+            Please fill out the form below to sign up:
+          </p>
+          <form name="signup" action="/signup" method="POST">
+            <div class="mb-4">
+              <label
+                for="username"
+                class="block text-sm font-medium text-gray-300"
+                >Username:</label
+              >
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+                class="mt-1 block w-full px-3 py-2 bg-gray-700 text-gray-300 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-300"
+                >Email:</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="mt-1 block w-full px-3 py-2 bg-gray-700 text-gray-300 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="password"
+                class="block text-sm font-medium text-gray-300"
+                >Password:</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                class="mt-1 block w-full px-3 py-2 bg-gray-700 text-gray-300 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+              />
+            </div>
+            <div class="mb-6">
+              <label for="roles" class="block text-sm font-medium text-gray-300"
+                >Roles:</label
+              >
+              <select
+                id="roles"
+                name="roles"
+                class="mt-1 block w-full px-3 py-2 bg-gray-700 text-gray-300 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+              >
+                <option value="Candidate" selected>Candidate</option>
+                <option value="Client">Client</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </div>
+            <div class="flex justify-center">
+              <input
+                type="submit"
+                value="Sign Up"
+                class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white flex justify-center py-4 mt-8">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">Contact Us</h3>
+            <ul class="list-disc space-y-2 text-gray-600">
+              <li>
+                Email:
+                <a
+                  href="mailto:youremail@yourcompany.com"
+                  class="text-blue-500 hover:underline"
+                  >youremail@yourcompany.com</a
+                >
+              </li>
+              <li>Phone: (555) 555-5555</li>
+              <li>Address: 123 Main Street, Anytown, CA 12345</li>
+            </ul>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Why we started?
+            </h3>
+            <p class="text-gray-400">
+              We started Samarpak Management Solutions because we identified
+              that small and medium business owners weren’t receiving that “Next
+              Level” Strategic, Operational, Financial and Management advice
+              that were given to larger corporations an edge.
+            </p>
+          </div>
+          <div class="flex justify-center items-center">
+            <a href="#" class="text-xl hover:text-gray-300 mr-4">
+              <i class="fab fa-instagram">Instagram</i>
+            </a>
+            <a href="#" class="text-xl hover:text-gray-300 mr-4">
+              <i class="fab fa-facebook-f">Facebook</i>
+            </a>
+            <a href="#" class="text-xl hover:text-gray-300">
+              <i class="fas fa-envelope">Mail</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- <body class="bg-gray-900 text-gray-300">
+    <h1>User Signup</h1>
+    <p>Please fill out the form below to sign up:</p>
+    <form name="signup" action="/signup" method="POST">
+      <label for="username">Username:</label><br />
+      <input type="text" id="username" name="username" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="password">Password:</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <label for="roles">Roles:</label><br />
+      <select id="roles" name="roles">
+        <option value="Candidate" selected>Candidate</option>
+        <option value="Client">Client</option>
+        <option value="Admin">Admin</option></select
+      ><br /><br />
+
+      <input type="submit">Sign Up</input>
+    </form>
+
+  </body> -->
+</html>

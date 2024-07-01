@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Applications</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function loadJobApplications() {
+        fetch("/job_applications")
+          .then((response) => response.json())
+          .then((data) => {
+            const table = document.getElementById("job-applications-table");
+            table.innerHTML = `
+            <thead>
+              <tr class="bg-gray-700">
+                <th class="px-4 py-2">User ID</th>
+                <th class="px-4 py-2">Job Description</th>
+                <th class="px-4 py-2">Shortlisted By</th>
+              </tr>
+            </thead>
+            <tbody>
+          `;
+            data.forEach((application) => {
+              const row = document.createElement("tr");
+              row.innerHTML = `
+              <td class="border px-4 py-2">${application.userid}</td>
+              <td class="border px-4 py-2">${application.jobdescription}</td>
+              <td class="border px-4 py-2">${application.shortlisted_by}</td>
+            `;
+              table.appendChild(row);
+            });
+          })
+          .catch((error) => console.error("Error fetching data:", error));
+      }
+    </script>
+  </head>
+  <body class="bg-gray-900 text-gray-300">
+    <header class="bg-gray-800 text-white px-4 py-4 flex justify-between">
+      <h1 class="text-5xl font-bold">Admin Login</h1>
+      <a href="login.html">
+        <button
+          class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+        >
+          Logout
+        </button>
+      </a>
+    </header>
+    <div class="container mx-auto px-4 py-8">
+      <div
+        class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-4xl mx-auto"
+      >
+        <h2 class="text-3xl font-bold mb-4 text-center">Job Applications</h2>
+        <button
+          onclick="loadJobApplications()"
+          class="mt-4 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 w-full"
+        >
+          Load Job Applications
+        </button>
+        <table class="mt-8 table-auto w-full text-left border-collapse">
+          <tbody id="job-applications-table" class="bg-gray-800">
+            <!-- Rows will be populated here by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="bg-gray-800 text-white flex justify-center py-4 mt-8 w-full">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">Contact Us</h3>
+            <ul class="list-disc space-y-2 text-gray-400">
+              <li>
+                Email:
+                <a
+                  href="mailto:youremail@yourcompany.com"
+                  class="text-blue-500 hover:underline"
+                  >youremail@yourcompany.com</a
+                >
+              </li>
+              <li>Phone: (555) 555-5555</li>
+              <li>Address: 123 Main Street, Anytown, CA 12345</li>
+            </ul>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Why we started?
+            </h3>
+            <p class="text-gray-400">
+              We started Samarpak Management Solutions because we identified
+              that small and medium business owners weren’t receiving that “Next
+              Level” Strategic, Operational, Financial and Management advice
+              that were given to larger corporations an edge.
+            </p>
+          </div>
+          <div>
+            <a href="#" class="text-xl hover:text-gray-400 mr-4">
+              <i class="fab fa-instagram">Instagram</i>
+            </a>
+            <a href="#" class="text-xl hover:text-gray-400 mr-4">
+              <i class="fab fa-facebook-f">Facebook</i>
+            </a>
+            <a href="#" class="text-xl hover:text-gray-400">
+              <i class="fas fa-envelope">Mail</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
